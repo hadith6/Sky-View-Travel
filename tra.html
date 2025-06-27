@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SkyView Travel Agency</title>
+  <link rel="stylesheet" href="tra.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+<body>
+
+  <header>
+    <h1>🌍 SkyView Travel Agency</h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#destinations">Destinations</a>
+      <a href="#services">Services</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#booking">Booking</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#faq">FAQ</a>
+      <a href="#team">Team</a>
+      <a href="#newsletter">Newsletter</a>
+      <a href="#map">Map</a>
+      <a href="#transportation">Transportation</a>
+    </nav>
+    <div class="lang-toggle">
+      <button id="langEn" class="lang-btn active">English</button>
+      <button id="langSo" class="lang-btn">Somali</button>
+    </div>
+    <button id="darkModeToggle">🌙 Dark Mode</button>
+    <a href="https://wa.me/254712345678" class="live-chat" target="_blank" title="Live Chat on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+  </header>
+
+  <section id="home" class="fade-in">
+    <div class="overlay">
+      <h2 class="tr-en">Explore the World with Us!</h2>
+      <h2 class="tr-so" style="display:none">Soo Booq Dunida Anaga!</h2>
+      <p class="tr-en">Your adventure begins here</p>
+      <p class="tr-so" style="display:none">Safarkaaga wuxuu ka bilaabmaa halkan</p>
+    </div>
+  </section>
+
+  <section id="destinations" class="fade-in">
+    <h2 class="tr-en">Popular Destinations</h2>
+    <h2 class="tr-so" style="display:none">Goobaha Dalxiiska ee Caanka ah</h2>
+    <div class="cards">
+      <div class="card"><img src="beach.jpg" alt="Destination 1"><h3>Mombasa</h3></div>
+      <div class="card"><img src="masai.jpg" alt="Destination 2"><h3>Maasai Mara</h3></div>
+      <div class="card"><img src="dubai.jpg" alt="Destination 3"><h3>Dubai</h3></div>
+    </div>
+  </section>
+
+  <section id="services" class="fade-in">
+    <h2 class="tr-en">Our Services</h2>
+    <h2 class="tr-so" style="display:none">Adeegyadayada</h2>
+    <div class="cards">
+      <div class="card service-card"><i class="fas fa-plane fa-2x"></i><h3>Flight Booking</h3><p>Book flights to any destination worldwide.</p></div>
+      <div class="card service-card"><i class="fas fa-hotel fa-2x"></i><h3>Hotel Reservation</h3><p>Find and reserve the best hotels.</p></div>
+      <div class="card service-card"><i class="fas fa-car fa-2x"></i><h3>Car Hire</h3><p>Comfortable cars for your journey.</p></div>
+      <div class="card service-card"><i class="fas fa-passport fa-2x"></i><h3>Visa Assistance</h3><p>Get help with your travel documents.</p></div>
+      <div class="card service-card"><i class="fas fa-map-signs fa-2x"></i><h3>Tour Guide</h3><p>Professional guides for your trips.</p></div>
+    </div>
+  </section>
+
+  <section id="gallery" class="fade-in">
+    <h2 class="tr-en">Travel Moments</h2>
+    <h2 class="tr-so" style="display:none">Xilliyada Safarka</h2>
+    <div class="slideshow"><img src="1.jpg" id="slide" alt="Slideshow"></div>
+  </section>
+
+  <section id="booking" class="fade-in">
+    <h2 class="tr-en">Book Your Trip</h2>
+    <h2 class="tr-so" style="display:none">Booqo Safarkaaga</h2>
+    <form id="bookingForm">
+      <input type="text" id="name" placeholder="Your Name" required />
+      <input type="email" id="email" placeholder="Your Email" required />
+      <select id="destination" required>
+        <option value="">Choose Destination</option>
+        <option value="Mombasa">Mombasa</option>
+        <option value="Maasai Mara">Maasai Mara</option>
+        <option value="Dubai">Dubai</option>
+      </select>
+      <button type="submit">Book Now</button>
+    </form>
+    <button id="showBooking" style="margin-top:10px;">Show My Booking</button>
+    <p id="msg"></p>
+    <div id="receiptModal" class="receipt-modal" style="display:none;">
+      <div class="receipt-content">
+        <span class="close-receipt" style="float:right;cursor:pointer;font-size:1.5em;">&times;</span>
+        <h3>Flight Booking Receipt</h3>
+        <div id="receiptDetails"></div>
+        <a id="waShare" class="wa-share-btn" href="#" target="_blank"><i class="fab fa-whatsapp"></i> Share on WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="testimonials" class="fade-in">
+    <h2 class="tr-en">What Our Clients Say</h2>
+    <h2 class="tr-so" style="display:none">Maxay Macaamiisheenu Ka Yiraahdeen</h2>
+    <div class="testimonial-box">
+      <p>“SkyView gave me the best trip of my life. Highly recommend them!”</p>
+      <strong>- Amina Ali</strong>
+    </div>
+    <div class="testimonial-box">
+      <p>“Easy booking, friendly staff, unforgettable memories.”</p>
+      <strong>- Brian Mwangi</strong>
+    </div>
+  </section>
+
+  <section id="faq" class="fade-in">
+    <h2 class="tr-en">Frequently Asked Questions (FAQ)</h2>
+    <h2 class="tr-so" style="display:none">Su'aalaha Badan La Isweydiiyo (FAQ)</h2>
+    <div class="faq-item">
+      <h4 class="faq-question">Sideen u bixiyaa lacagta?</h4>
+      <div class="faq-answer">Waxaad lacagta ku bixin kartaa online, bank transfer, ama xafiiskayaga.</div>
+    </div>
+    <div class="faq-item">
+      <h4 class="faq-question">Ma heli karaa dalabyo gaar ah?</h4>
+      <div class="faq-answer">Haa, waxaan leenahay dalabyo gaar ah xilliyada fasaxyada.</div>
+    </div>
+    <div class="faq-item">
+      <h4 class="faq-question">Ma iga caawin kartaa helitaanka visa?</h4>
+      <div class="faq-answer">Haa, waxaan bixinaa adeegyo caawimaad visa.</div>
+    </div>
+  </section>
+
+  <section id="team" class="fade-in">
+    <h2 class="tr-en">Our Team</h2>
+    <h2 class="tr-so" style="display:none">Kooxdayada</h2>
+    <div class="cards">
+      <div class="card team-card"><img src="1.jpg" alt="Amina Hassan"><h3>Amina Hassan</h3><p>CEO & Founder</p></div>
+      <div class="card team-card"><img src="2.jpg" alt="Mohamed Ali"><h3>Mohamed Ali</h3><p>Travel Consultant</p></div>
+      <div class="card team-card"><img src="3.jpg" alt="Fatima Noor"><h3>Fatima Noor</h3><p>Tour Guide</p></div>
+    </div>
+  </section>
+
+  <section id="newsletter" class="fade-in">
+    <h2 class="tr-en">Join Our Newsletter</h2>
+    <h2 class="tr-so" style="display:none">Ku Biir Wargeyskeenna</h2>
+    <form id="newsletterForm">
+      <input type="email" id="newsletterEmail" placeholder="Enter your email..." required>
+      <button type="submit">Subscribe</button>
+    </form>
+    <p id="newsletterMsg"></p>
+  </section>
+
+  <section id="map" class="fade-in">
+    <h2 class="tr-en">Our Office Location</h2>
+    <h2 class="tr-so" style="display:none">Goobta Xafiiskayaga</h2>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1994.892807674426!2d36.821946!3d-1.292066!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f10d73d1f8af7%3A0x9e23eeae23c8b6ae!2sNairobi%20CBD!5e0!3m2!1sen!2ske!4v1700000000000"
+      width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+  </section>
+
+  <section id="transportation" class="fade-in">
+    <h2 class="tr-en">Transportation</h2>
+    <h2 class="tr-so" style="display:none">Gaadiidka</h2>
+    <div class="cards">
+      <div class="card transport-card"><i class="fas fa-plane-departure fa-2x"></i><h3>By Air</h3><p>Fly with top airlines to your destination.</p></div>
+      <div class="card transport-card"><i class="fas fa-bus fa-2x"></i><h3>By Bus</h3><p>Comfortable buses available for all routes.</p></div>
+      <div class="card transport-card"><i class="fas fa-car-side fa-2x"></i><h3>By Car</h3><p>Private and rental cars for your convenience.</p></div>
+    </div>
+  </section>
+
+  <section id="offers" class="fade-in">
+    <h2 class="tr-en">Special Offers</h2>
+    <h2 class="tr-so" style="display:none">Dalabyo Gaar ah</h2>
+    <div class="cards">
+      <div class="card offer-card"><h3 class="tr-en">Summer Discount</h3><h3 class="tr-so" style="display:none">Qiimo Dhimis Xagaaga</h3><p class="tr-en">Get up to 20% off on all bookings!</p><p class="tr-so" style="display:none">Hel ilaa 20% dhimis dhammaan safarrada!</p></div>
+      <div class="card offer-card"><h3 class="tr-en">Family Package</h3><h3 class="tr-so" style="display:none">Xidhmada Qoyska</h3><p class="tr-en">Special rates for families and groups.</p><p class="tr-so" style="display:none">Qiimo gaar ah qoysaska iyo kooxaha.</p></div>
+    </div>
+  </section>
+
+  <section id="partners" class="fade-in">
+    <h2 class="tr-en">Our Partners</h2>
+    <h2 class="tr-so" style="display:none">La-hawlgalayaasheena</h2>
+    <div class="cards">
+      <div class="card partner-card"><img src="logo k.jpg" alt="Kenya Airways" style="height:60px;width:auto;margin:20px auto;"><h3>Kenya Airways</h3></div>
+      <div class="card partner-card"><img src="emi logo.jpg" alt="Emirates" style="height:60px;width:auto;margin:20px auto;"><h3>Emirates</h3></div>
+    </div>
+  </section>
+
+  <section id="tips" class="fade-in">
+    <h2 class="tr-en">Travel Tips</h2>
+    <h2 class="tr-so" style="display:none">Talooyin Safar</h2>
+    <ul style="max-width:600px;margin:20px auto;text-align:left;">
+      <li class="tr-en">Always keep a copy of your passport.</li>
+      <li class="tr-so" style="display:none">Had iyo jeer nuqul ka samee baasaboorkaaga.</li>
+      <li class="tr-en">Book your flights in advance for better prices.</li>
+      <li class="tr-so" style="display:none">Hore u sii qabsada tigidhada diyaaradda si aad u heshaan qiimo fiican.</li>
+      <li class="tr-en">Check visa requirements before traveling.</li>
+      <li class="tr-so" style="display:none">Hubi shuruudaha fiisaha ka hor intaadan safarin.</li>
+    </ul>
+  </section>
+
+  <section id="contact" class="fade-in">
+    <h2 class="tr-en">Contact Us</h2>
+    <h2 class="tr-so" style="display:none">Nala Soo Xiriir</h2>
+    <form id="contactForm">
+      <input type="text" id="contactName" placeholder="Your Name / Magacaaga" required />
+      <input type="email" id="contactEmail" placeholder="Your Email / Emailkaaga" required />
+      <textarea id="contactMsg" placeholder="Your Message / Fariintaada" required style="padding:10px;border-radius:5px;"></textarea>
+      <button type="submit" class="tr-en">Send Message</button>
+      <button type="submit" class="tr-so" style="display:none">Dir Fariin</button>
+    </form>
+    <p id="contactMsgResult"></p>
+  </section>
+
+  <button id="backToTop" title="Back to Top"><i class="fas fa-arrow-up"></i></button>
+
+  <footer>
+    <div class="footer-social">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-whatsapp"></i></a>
+    </div>
+    <p class="tr-en">📧 Email: qeysarram30@.com</p>
+    <p class="tr-so" style="display:none">📧 Email: qeysarram30@gmail.com</p>
+    <p class="tr-en">📞 Phone: +254718170548</p>
+    <p class="tr-so" style="display:none">📞 Telefoon: +254 718170548</p>
+    <p class="tr-en">📍 Location: Nairobi, Kenya</p>
+    <p class="tr-so" style="display:none">📍 Goobta: Nairobi, Kenya</p>
+    <p class="tr-en">&copy; 2025 SkyView Travel Agency. All rights reserved.</p>
+    <p class="tr-so" style="display:none">&copy; 2025 SkyView Travel Agency. Xuquuqda way dhantahay.</p>
+  </footer>
+
+  <script src="tra.js"></script>
+</body>
+</html>
